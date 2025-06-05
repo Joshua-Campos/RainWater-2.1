@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Captación de Agua de Lluvia</title>
+    <link rel="stylesheet" href="inicios.css">
+    <style>
+        /* Estilo del encabezado */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffcc00;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            background: #ffcc00;
+            color: #000;
+            box-shadow: 0px 2px 10px rgba(255, 204, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Captación de Agua de Lluvia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠</a></li>
+                <li><a href="inicios.html">Nosotros</a></li> 
+                <li><a href="dato.html">Datos</a></li> 
+                <li><a href="simulador.html">Calcula duración</a></li> 
+                <li><a href="carusel.html">Evidencias</a></li> 
+                <li><a href="perguntas.html">Cuestionario</a></li> 
+                <li><a href="presupuesto.html">Costo</a></li> 
+
+                <li><a href="contact.html">Contacto</a></li> 
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="intro">
+        <div class="texto">
+            <h2>¿Qué es la Captación de Agua de Lluvia?</h2>
+            <p>
+                La captación de agua pluvial es el proceso de recolectar y almacenar el agua de lluvia
+                para su posterior uso en el hogar, la agricultura e incluso el consumo humano, con el
+                tratamiento adecuado. Es una práctica sostenible que ayuda a conservar el agua y reducir
+                el impacto ambiental.
+            </p>
+        </div>
+        <div class="imagen">
+            <img src="captacion1.jpeg" alt="Sistema de captación de agua">
+        </div>
+    </section>
+
+<section class="checklist">
+  <h2>Sigue estos pasos para implementar tu sistema de captación de agua de lluvia</h2>
+  <ul>
+    <li><input type="checkbox" id="step1"><label for="step1"> Identificar el área de captación (techo, terraza, etc.)</label></li>
+    <li><input type="checkbox" id="step2"><label for="step2"> Instalar canaletas para recolectar el agua</label></li>
+    <li><input type="checkbox" id="step3"><label for="step3"> Conectar las canaletas a un tanque de almacenamiento</label></li>
+    <li><input type="checkbox" id="step4"><label for="step4"> Implementar un filtro para evitar impurezas</label></li>
+    <li><input type="checkbox" id="step5"><label for="step5"> Mantener y limpiar el sistema regularmente</label></li>
+  </ul>
+</section>
+
+
+    <section class="beneficios">
+        <h2>Beneficios de la Captación de Agua de Lluvia</h2>
+        <div class="contenedor">
+            <div class="beneficio">
+                <img src="ahorro.jpeg" alt="Ahorro de agua">
+                <h3>Ahorro de Agua</h3>
+                <p>Reduce la dependencia de fuentes de agua convencionales y disminuye el costo de facturas.</p>
+            </div>
+            <div class="beneficio">
+                <img src="sostenible.jpeg" alt="Sostenibilidad">
+                <h3>Solución Sostenible</h3>
+                <p>Contribuye a la conservación de los recursos naturales y reduce la contaminación.</p>
+            </div>
+            <div class="beneficio">
+                <img src="autonomia.jpeg" alt="Autonomía">
+                <h3>Mayor Autonomía</h3>
+                <p>Proporciona una fuente de agua independiente en temporadas de sequía o crisis hídricas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Captación de Agua de Lluvia | Proyecto Educativo</p>
+    </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkboxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+
+    // Cargar estado guardado
+    checkboxes.forEach(cb => {
+      const saved = localStorage.getItem(cb.id);
+      if (saved === 'true') cb.checked = true;
+
+      // Guardar cambios al marcar/desmarcar
+      cb.addEventListener('change', () => {
+        localStorage.setItem(cb.id, cb.checked);
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

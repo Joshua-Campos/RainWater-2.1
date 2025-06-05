@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Captación de Agua</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <style>
+        /* Estilo del encabezado */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffcc00;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            background: #ffcc00;
+            color: #000;
+            box-shadow: 0px 2px 10px rgba(255, 204, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Simulación de Captación de Agua de Lluvia</h1>
+        <nav>
+            <ul>
+                 <li><a href="index.html">🏠</a></li>
+
+                <li><a href="inicios.html">Nosotros</a></li> 
+                <li><a href="dato.html">Datos</a></li> 
+                <li><a href="simulador.html">Calcula duración</a></li> 
+                <li><a href="carusel.html">Evidencias</a></li> 
+                <li><a href="perguntas.html">Cuestionario</a></li> 
+                <li><a href="presupuesto.html">Costo</a></li> 
+
+                <li><a href="contact.html">Contacto</a></li> 
+
+            </ul>
+        </nav>
+    </header>
+<p id="indicador-resultados" style="font-size:1.2em; font-weight:bold; color:#0275d8; margin-top: 30px;">
+    ↓ Los resultados aparecen abajo ↓
+</p>
+    <div id="contenedor-principal" style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
+    <form id="formulario">
+        <!-- Tu formulario aquí (igual) -->
+        <label for="techo">Tamaño del techo (m²):</label>
+        <input type="number" id="techo" name="techo" required>
+
+        <label for="lluvia">Lluvia esperada (mm):</label>
+        <input type="number" id="lluvia" name="lluvia" required>
+
+        <label for="eficiencia">Eficiencia del sistema (%):</label>
+        <input type="number" id="eficiencia" name="eficiencia" required>
+
+        <label for="tanque">Capacidad del tanque (litros):</label>
+        <input type="number" id="tanque" name="tanque" required>
+
+        <label for="consumo">Consumo diario (litros):</label>
+        <input type="number" id="consumo" name="consumo" required>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <!-- Aquí la lista de datos ingresados -->
+    <div id="datos-ingresados" style="text-align: left; max-width: 300px; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 12px; box-shadow: 4px 4px 15px rgba(0,0,0,0.2);">
+        
+        <p>
+            <strong>Explicación:</strong><br>
+            <ul>
+                <li><em>Tamaño del techo:</em> Área de recolección de agua.</li>
+                <li><em>Lluvia esperada:</em> Cantidad de lluvia prevista.</li>
+                <li><em>Eficiencia:</em> Porcentaje de agua captada del total.</li>
+                <li><em>Capacidad tanque:</em> Máximo de agua que puede almacenar.</li>
+                <li><em>Consumo diario:</em> Agua que se usa cada día.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+
+
+
+
+    <div id="resultado"></div>
+
+    <!-- Contenedor visual del tanque -->
+    <div id="contenedor-tanque">
+        <div id="nivel-agua"></div>
+    </div>
+    <p id="texto-nivel">Nivel del tanque</p>
+
+    <script src="script.js"></script>
+</body>
+</html>

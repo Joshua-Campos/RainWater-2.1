@@ -1,0 +1,266 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #62ff8a, #4cb8c4);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Sección de introducción */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    background: white;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.intro .texto {
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.intro .texto h2 {
+    color: #0275d8;
+    font-size: 2em;
+}
+
+.intro .texto p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.intro .imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sección de beneficios */
+.beneficios {
+    padding: 40px;
+    background: #f8f9fa;
+}
+
+.beneficios h2 {
+    font-size: 2em;
+    color: #0275d8;
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: scale(1.05);
+}
+
+.beneficio img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #0275d8;
+}
+
+.beneficio h3 {
+    color: #0275d8;
+    font-size: 1.3em;
+}
+
+.beneficio p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Pie de página */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+.checklist {
+    background: white;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.checklist h2 {
+    color: #0275d8;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.checklist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.checklist input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.checklist label {
+    cursor: pointer;
+    color: #333;
+}
+/* --------- Media Queries ----------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section p {
+        font-size: 1.1em;
+    }
+}
+
+/* Teléfonos medianos (landscape) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 0.95em;
+        padding: 6px 8px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Teléfonos pequeños (portrait) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+/* Teléfonos muy pequeños */
+@media (max-width: 350px) {
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    section p {
+        font-size: 0.95em;
+    }
+}
+

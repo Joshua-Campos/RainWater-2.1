@@ -1,0 +1,203 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    height: 100vh;
+    background-color: #F5F5F5;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search {
+    padding: 50px 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search i {
+    font-size: 25px;
+    color: #111111;
+    }
+    .search-txt {
+        display: flex;
+        align-items: center;
+        
+    }
+    .search-txt i{
+        font-size: 40px;
+        color: #F8010A;
+    }
+.search-txt h2{
+    color: #111111;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.movies{
+    padding: 50px 0 150px 0;
+    }
+
+    .movies h2{
+        font-size: 25px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .swiper{
+        width: 100%;
+    }
+    .swiper-slide{
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+    }
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+/* --------- Media Queries ----------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section p {
+        font-size: 1.1em;
+    }
+}
+
+/* Teléfonos medianos (landscape) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 0.95em;
+        padding: 6px 8px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Teléfonos pequeños (portrait) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+/* Teléfonos muy pequeños */
+@media (max-width: 350px) {
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    section p {
+        font-size: 0.95em;
+    }
+}
+
+/* Estilo extra para que el nav se vea bien en móviles */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Mejora para el carrusel en pantallas pequeñas */
+.swiper-slide {
+    width: 70vw; /* que se vea más grande en celulares */
+    max-width: 300px;
+}
+
+/* Estilo responsivo para video con aspect-ratio */
+.video-wrapper-local {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Padding y fuente para pantallas extra pequeñas */
+@media (max-width: 320px) {
+    header {
+        padding: 10px;
+    }
+
+    .video-container p {
+        font-size: 0.9em;
+    }
+}

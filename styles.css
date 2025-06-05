@@ -1,0 +1,111 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #62ff8a, #4cb8c4);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Encabezado */
+h1 {
+    color: #fff;
+    font-size: 2.2em;
+    margin-top: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario */
+form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    display: inline-block;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    font-size: 1em;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #4cb8c4;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #0275d8;
+    box-shadow: 0 0 8px rgba(2, 117, 216, 0.5);
+}
+
+/* Botón */
+button {
+    background-color: #0275d8;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #025aa5;
+    transform: scale(1.05);
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Contenedor del tanque */
+#contenedor-tanque {
+    width: 140px;
+    height: 300px;
+    border: 4px solid #000;
+    position: relative;
+    margin: 30px auto;
+    background: #d1ecf1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Nivel del agua */
+#nivel-agua {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, #007bff, #0056b3);
+    transition: height 1s ease-in-out;
+}
+
+/* Texto del nivel */
+#texto-nivel {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}

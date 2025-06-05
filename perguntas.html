@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <title>Juego de preguntas</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+<style>
+        /* Estilo del encabezado */
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffcc00;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            background: #ffcc00;
+            color: #000;
+            box-shadow: 0px 2px 10px rgba(255, 204, 0, 0.8);
+        }
+        /* --------- Media Queries ----------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section p {
+        font-size: 1.1em;
+    }
+}
+
+/* Teléfonos medianos (landscape) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 0.95em;
+        padding: 6px 8px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Teléfonos pequeños (portrait) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+/* Teléfonos muy pequeños */
+@media (max-width: 350px) {
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    section p {
+        font-size: 0.95em;
+    }
+}
+    </style>
+</head>
+ 
+<body>
+  <header>
+    <h1>Simulación de Captación de Agua de Lluvia</h1>
+        <nav>
+            <ul>
+                 <li><a href="index.html">🏠</a></li>
+
+                <li><a href="inicios.html">Nosotros</a></li> 
+                <li><a href="dato.html">Datos</a></li> 
+                <li><a href="simulador.html">Calcula duración</a></li> 
+                <li><a href="carusel.html">Evidencias</a></li> 
+                <li><a href="perguntas.html">Cuestionario</a></li> 
+                <li><a href="presupuesto.html">Costo</a></li> 
+
+                <li><a href="contact.html">Contacto</a></li> 
+
+            </ul>
+        </nav>
+    </header>
+  <style>
+    * {
+      transition: all 0.3s;
+    }
+    body {
+      background: #62ff8a;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      font-family: calibri;
+      font-size: 120%;
+    }
+    .contenedor {
+      width: 98vw;
+      height: 97vh;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .encabezado {
+      position: relative;
+      background: white;
+      min-width: 300px;
+      width: 70%;
+      max-width: 600px;
+      padding: 10px;
+    }
+    .categoria {
+      opacity: 0.3;
+      text-align: left;
+    }
+
+    .pregunta {
+      padding: 10px;
+    }
+
+    .imagen {
+      object-fit: cover;
+      height: 0px;
+      width: 0px;
+    }
+
+    .btn {
+      background: white;
+      width: 60%;
+      max-width: 550px;
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    
+    .numero{
+      position: absolute;
+      opacity:0.3;
+      top: 10px;
+      right: 10px;
+    }
+    
+    .puntaje{
+      padding:10px;
+      color:white;
+    }
+  </style>
+
+  <div class="contenedor">
+    <div class="puntaje" id="puntaje"></div>
+    <div class="encabezado">
+      <div class="categoria" id="categoria">
+      </div>
+      <div class="numero" id="numero"></div>
+      <div class="pregunta" id="pregunta">
+      </div>
+      <img src="#" class="imagen" id="imagen">
+    </div>
+    <div class="btn" id="btn1" onclick="oprimir_btn(0)"></div>
+    <div class="btn" id="btn2" onclick="oprimir_btn(1)"></div>
+    <div class="btn" id="btn3" onclick="oprimir_btn(2)"></div>
+    <div class="btn" id="btn4" onclick="oprimir_btn(3)"></div>
+    
+    <script src="preguntas.js"></script>
+  </div>
+
+</body></html>
+

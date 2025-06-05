@@ -1,0 +1,316 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7e9, #a3f5c6);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(to bottom, #1b3b1a, #3edf8f);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Sección de introducción */
+.introduccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background: white;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.texto {
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+}
+
+.texto h2 {
+    color: #136b3b;
+    font-size: 2em;
+}
+
+.texto p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.imagen {
+    width: 45%;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Sección de datos de agua */
+.datos-agua {
+    padding: 40px;
+    background: #c8ffd4;
+}
+
+.datos-agua h2 {
+    font-size: 2em;
+    color: #136b3b;
+    margin-bottom: 20px;
+}
+
+.contenedor-datos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.dato {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+.dato:hover {
+    transform: scale(1.05);
+}
+
+.dato img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #136b3b;
+}
+
+.dato h3 {
+    color: #136b3b;
+    font-size: 1.3em;
+}
+
+.dato p {
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Sección de ahorro */
+.ahorro {
+    padding: 40px;
+    background: white;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ahorro h2 {
+    color: #136b3b;
+    font-size: 2em;
+}
+
+.ahorro p {
+    font-size: 1.2em;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Pie de página */
+footer {
+    background: #1b3b1a;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 15px 15px 0 0;
+}
+#toggleImagen {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #136b3b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggleImagen:hover {
+    background-color: #0f502c;
+}
+.impacto {
+    padding: 40px;
+    background: #e6ffee;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.impacto h2 {
+    color: #136b3b;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.impacto label {
+    font-size: 1.1em;
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.impacto button {
+    padding: 8px 16px;
+    background-color: #136b3b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.impacto button:hover {
+    background-color: #0f502c;
+}
+/* --------- Media Queries ----------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    section p {
+        font-size: 1.1em;
+    }
+}
+
+/* Teléfonos medianos (landscape) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 0.95em;
+        padding: 6px 8px;
+    }
+
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Teléfonos pequeños (portrait) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+/* Teléfonos muy pequeños */
+@media (max-width: 350px) {
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    section p {
+        font-size: 0.95em;
+    }
+}
