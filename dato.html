@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Captación de Agua de Lluvia</title>
+    <link rel="stylesheet" href="dato.css">
+    <style>
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ffcc00;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 8px 15px;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            background: #ffcc00;
+            color: #000;
+            box-shadow: 0px 2px 10px rgba(255, 204, 0, 0.8);
+        }
+        header {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>¿Por qué captamos agua de lluvia?</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠</a></li>
+                <li><a href="inicios.html">Sobre nosotros</a></li>
+                <li><a href="dato.html">Datos</a></li>
+                <li><a href="simulador.html">Calcula duración</a></li>
+                <li><a href="carusel.html">Evidencias</a></li> 
+                <li><a href="perguntas.html">Cuestionario</a></li> 
+                <li><a href="presupuesto.html">Presupuesto</a></li> 
+
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="introduccion">
+        <div class="texto">
+            <h2>La importancia de la captación de agua pluvial</h2>
+            <p>
+                En un mundo donde el agua es cada vez más escasa, encontrar soluciones sostenibles es fundamental. La captación de agua de lluvia permite aprovechar este recurso natural para reducir el desperdicio y garantizar el mantenimiento de áreas verdes sin afectar el suministro de agua potable.
+            </p>
+        </div>
+        <div class="imagen">
+    <img src="captacion2.jpeg" alt="Agua de lluvia en jardineras" id="imagenCaptacion">
+    <button id="toggleImagen">Ocultar imagen</button>
+</div>
+
+    </section>
+
+    <section class="datos-agua">
+        <h2>¿Cuánta agua se consume en México?</h2>
+        <p>Según el INEGI, una familia mexicana gasta en promedio <strong>380 litros de agua por día</strong>. Gran parte de este consumo se destina a actividades como:</p>
+        <div class="contenedor-datos">
+            <div class="dato">
+                <img src="lavado.jpeg" alt="Lavado de ropa">
+                <h3>Lavado de ropa</h3>
+                <p>50-100 litros por carga</p>
+            </div>
+            <div class="dato">
+                <img src="bano.jpeg" alt="Baño diario">
+                <h3>Baño diario</h3>
+                <p>50-80 litros por ducha</p>
+            </div>
+            <div class="dato">
+                <img src="riego.jpeg" alt="Riego de plantas">
+                <h3>Riego de plantas</h3>
+                <p>6-12 litros por metro cuadrado</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ahorro">
+        <h2>El ahorro que puedes lograr</h2>
+        <p>
+            A diferencia de los sistemas de captación de agua para uso doméstico, este proyecto está diseñado <strong>exclusivamente para jardineras</strong> en espacios públicos, escuelas y áreas comunitarias.
+        </p>
+        <p>
+            Utilizando agua de lluvia en lugar de agua potable, es posible reducir el consumo de agua en riego hasta en un <strong>60%</strong>, asegurando que las áreas verdes se mantengan sin comprometer el acceso a agua limpia para la población.
+        </p>
+        <div class="imagen">
+            <img src="ahorro.jpeg" alt="Ahorro con captación de agua">
+        </div>
+    </section>
+
+<section class="impacto">
+    <h2>Impacto Ambiental Positivo</h2>
+    <p>¿Cuál de estos beneficios crees que es el más importante al captar agua de lluvia?</p>
+    
+    <form id="impactoForm">
+        <label>
+            <input type="radio" name="beneficio" value="ahorro_agua">
+            Ahorro de agua potable
+        </label><br>
+
+        <label>
+            <input type="radio" name="beneficio" value="reduccion_inundaciones">
+            Reducción de inundaciones urbanas
+        </label><br>
+
+        <label>
+            <input type="radio" name="beneficio" value="conservacion_ecosistemas">
+            Conservación de ecosistemas
+        </label><br>
+
+        <label for="ahorro_agua">
+    <input type="radio" id="ahorro_agua" name="beneficio" value="ahorro_agua">
+    Ahorro de agua potable
+</label><br>
+
+
+        <button type="submit">Enviar</button>
+    </form>
+    <h3>Estadísticas actuales:</h3>
+<ul id="estadisticasImpacto"></ul>
+<button onclick="reiniciarEstadisticas()">Reiniciar estadísticas</button>
+
+
+    <p id="respuestaImpacto" style="margin-top: 15px; font-weight: bold; color: #136b3b;"></p>
+</section>
+
+
+
+    <footer>
+        <p>© 2025 Captación de Agua de Lluvia | Proyecto Educativo</p>
+    </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+});
+
+    const boton = document.getElementById("toggleImagen");
+    const imagen = document.getElementById("imagenCaptacion");
+
+    boton.addEventListener("click", () => {
+        if (imagen.style.display === "none") {
+            imagen.style.display = "block";
+            boton.textContent = "Ocultar imagen";
+        } else {
+            imagen.style.display = "none";
+            boton.textContent = "Mostrar imagen";
+        }
+    });
+    
+// Inicializar votos si no existen
+const opciones = ["ahorro_agua", "reduccion_inundaciones", "conservacion_ecosistemas", "fomento_conciencia"];
+if (!localStorage.getItem("votosImpacto")) {
+    const votosIniciales = {};
+    opciones.forEach(op => votosIniciales[op] = 0);
+    localStorage.setItem("votosImpacto", JSON.stringify(votosIniciales));
+}
+
+// Manejador del formulario
+document.getElementById("impactoForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const seleccion = document.querySelector('input[name="beneficio"]:checked');
+    const respuesta = document.getElementById("respuestaImpacto");
+
+    if (seleccion) {
+        const votos = JSON.parse(localStorage.getItem("votosImpacto"));
+        votos[seleccion.value]++;
+        localStorage.setItem("votosImpacto", JSON.stringify(votos));
+
+        respuesta.textContent = `¡Gracias por tu respuesta!`;
+        actualizarEstadisticas();
+    } else {
+        respuesta.textContent = "Por favor selecciona una opción.";
+    }
+});
+
+// Función para mostrar estadísticas
+function actualizarEstadisticas() {
+    const votos = JSON.parse(localStorage.getItem("votosImpacto"));
+    const totalVotos = Object.values(votos).reduce((a, b) => a + b, 0);
+    const lista = document.getElementById("estadisticasImpacto");
+    lista.innerHTML = "";
+
+    opciones.forEach(opcion => {
+        const porcentaje = totalVotos > 0 ? ((votos[opcion] / totalVotos) * 100).toFixed(1) : 0;
+        let nombreVisible = "";
+
+        switch (opcion) {
+            case "ahorro_agua":
+                nombreVisible = "Ahorro de agua potable";
+                break;
+            case "reduccion_inundaciones":
+                nombreVisible = "Reducción de inundaciones urbanas";
+                break;
+            case "conservacion_ecosistemas":
+                nombreVisible = "Conservación de ecosistemas";
+                break;
+            case "fomento_conciencia":
+                nombreVisible = "Fomento de la conciencia ambiental";
+                break;
+        }
+
+        lista.innerHTML += `<li>${nombreVisible}: ${votos[opcion]} votos (${porcentaje}%)</li>`;
+    });
+}
+
+// Mostrar estadísticas al cargar
+actualizarEstadisticas();
+function reiniciarEstadisticas() {
+    if (confirm("¿Estás seguro de que quieres reiniciar las estadísticas?")) {
+        const votosIniciales = {};
+        opciones.forEach(op => votosIniciales[op] = 0);
+        localStorage.setItem("votosImpacto", JSON.stringify(votosIniciales));
+        actualizarEstadisticas();
+    }
+}
+
+</script>
+
+</body>
+</html>
